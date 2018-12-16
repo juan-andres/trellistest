@@ -1,0 +1,13 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+adafruit-trellism4 = { git = "https://github.com/adafruit/Adafruit_CircuitPython_TrellisM4.git" }
+adafruit-adxl34x = { git = "https://github.com/adafruit/Adafruit_CircuitPython_ADXL34x.git" }
+
+[requires]
+python_version = "2.7"
