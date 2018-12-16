@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "77e9c7a61a83fce2b47510ee3a079f8a95dee20dd5ad2c9f03a4430b76525564"
+            "sha256": "6a0e0a1612b640ea0d5994a492e40ddc9cae62b24837ec2d03d81826178b57b5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,15 +15,19 @@
             }
         ]
     },
-    "default": {
-        "board": {
-            "hashes": [
-                "sha256:149e5dd87be1835ecfea76fc25bba29dc5ee9ed5088338e61557124601b9eaf4",
-                "sha256:831de92f159ae43d4b4458155a7156947fd48da7886d65598f0882453abe5b6d"
-            ],
-            "index": "pypi",
-            "version": "==0.0.0.post0"
+    "default": {},
+    "develop": {
+        "adafruit-adxl34x": {
+            "git": "https://github.com/adafruit/Adafruit_CircuitPython_ADXL34x.git",
+            "ref": "818e1f80ea8d4fd0d51a2c23cd4305ae484521ae"
+        },
+        "adafruit-trellism4": {
+            "git": "https://github.com/adafruit/Adafruit_CircuitPython_TrellisM4.git",
+            "ref": "4997633b90ee4314d469e316fc9623baf1150aa4"
+        },
+        "pyne-test": {
+            "git": "https://github.com/Avvir/pyne.git",
+            "ref": "fb64feb04f548ecb5b42420edd4593445f8adcdb"
         }
-    },
-    "develop": {}
+    }
 }

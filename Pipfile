@@ -4,10 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-
-[packages]
 adafruit-trellism4 = { git = "https://github.com/adafruit/Adafruit_CircuitPython_TrellisM4.git" }
 adafruit-adxl34x = { git = "https://github.com/adafruit/Adafruit_CircuitPython_ADXL34x.git" }
+pyne-test = { git = "https://github.com/Avvir/pyne.git" }
+
+[packages]
 
 [requires]
-python_version = "2.7"
+python_version = "3.7"

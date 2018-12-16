@@ -20,7 +20,7 @@ import adafruit_trellism4
 import adafruit_adxl34x
 import busio
 from color_names import *
-
+from image_viewer.game import Game
 
 trellis = adafruit_trellism4.TrellisM4Express()
 trellis.pixels.auto_write = False
@@ -28,7 +28,7 @@ trellis.pixels.auto_write = False
 i2c = busio.I2C(board.ACCELEROMETER_SCL, board.ACCELEROMETER_SDA)
 accelerometer = adafruit_adxl34x.ADXL345(i2c)
 
-the_game = game.Game(trellis, accelerometer)
+the_game = Game(trellis, accelerometer)
 
 for x in range(8):
     for y in range(4):
@@ -42,5 +42,9 @@ keys = []
 while not keys:
     keys = trellis.pressed_keys
 
+blue_or_yellow = "Blue" if keys[0][0] >= 4  else "yellow"
+print("you chose " + blue_or_yellow)
+
 while True:
-    the_game.play(keys[0][0] < 4)        # False = key, True = accel
+    the_game.play()
+    # the_game.play(keys[0][0] < 4)        # False = key, True = accel
